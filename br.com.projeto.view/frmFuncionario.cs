@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sistema_consultorio.br.com.projeto.view
 {
-    public partial class frmLogin : Form
+    public partial class frmFuncionario : Form
     {
-        public frmLogin()
+        public frmFuncionario()
         {
             InitializeComponent();
         }
