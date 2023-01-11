@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sistema_consultorio.br.com.projeto.model
 {
-    public class Cliente : Pessoa
+    public class Paciente : Pessoa
     {
         public Image foto { get; set; }
         public string nome_pai { get; set; }

@@ -1,11 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="br.com.projeto.view\controleBranco.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="br.com.projeto.view\frmAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="br.com.projeto.view\frmDentista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="br.com.projeto.view\frmEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="br.com.projeto.view\frmFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="br.com.projeto.view\frmLogin.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="br.com.projeto.view\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="br.com.projeto.view\frmPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="br.com.projeto.view\userControlDias.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

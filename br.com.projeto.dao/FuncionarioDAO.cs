@@ -23,9 +23,9 @@ namespace sistema_consultorio.br.com.projeto.dao
             {
                 //comando SQL
                 string strCmd = @"insert into tb_funcionarios (nome,data_cadastro,data_nascimento,cpf,rg,telefone,celular
-                                  email,senha,endereco,numero,complemento,bairro,cidade,cep,estado,sexo) values
+                                  email,senha,nivel_acesso,endereco,numero,complemento,bairro,cidade,cep,estado,sexo) values
                                   (@nome,@data_cadastro,@data_nascimento,@cpf,@rg,@telefone,@celular
-                                  @email,@senha,@endereco,@numero,@complemento,@bairro,@cidade,@cep,@estado,@sexo)";
+                                  @email,@senha,@nivel_acesso,@endereco,@numero,@complemento,@bairro,@cidade,@cep,@estado,@sexo)";
 
                 MySqlCommand executacmd = new MySqlCommand(strCmd, conexao);
                 executacmd.Parameters.AddWithValue("@nome", obj.nome);
@@ -35,7 +35,9 @@ namespace sistema_consultorio.br.com.projeto.dao
                 executacmd.Parameters.AddWithValue("@rg", obj.rg);
                 executacmd.Parameters.AddWithValue("@telefone", obj.telefone);
                 executacmd.Parameters.AddWithValue("@celular", obj.celular);
+                executacmd.Parameters.AddWithValue("@email", obj.email);
                 executacmd.Parameters.AddWithValue("@senha", obj.senha);
+                executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel_acesso);
                 executacmd.Parameters.AddWithValue("@endereco", obj.endereco);
                 executacmd.Parameters.AddWithValue("@numero", obj.numero);
                 executacmd.Parameters.AddWithValue("@complemento", obj.complemento);
@@ -109,7 +111,6 @@ namespace sistema_consultorio.br.com.projeto.dao
         #endregion  
 
         #region Método para excluir funcionario
-        //Metodo para excluir cliente
         public void ExcluirFuncionario(Funcionario obj)
         {
             try
