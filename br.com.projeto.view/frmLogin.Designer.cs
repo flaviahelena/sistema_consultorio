@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,7 +46,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtSenha);
             this.groupBox1.Controls.Add(this.txtUsuario);
-            this.groupBox1.Location = new System.Drawing.Point(232, 26);
+            this.groupBox1.Location = new System.Drawing.Point(242, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(311, 156);
             this.groupBox1.TabIndex = 0;
@@ -86,9 +87,11 @@
             // 
             // imgLogo
             // 
+            this.imgLogo.Image = global::sistema_consultorio.Properties.Resources.LOGO_FERNANDA___Copia__2_1;
             this.imgLogo.Location = new System.Drawing.Point(12, 12);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(205, 204);
+            this.imgLogo.Size = new System.Drawing.Size(222, 190);
+            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogo.TabIndex = 1;
             this.imgLogo.TabStop = false;
             // 
@@ -109,6 +112,7 @@
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.imgLogo);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
