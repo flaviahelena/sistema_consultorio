@@ -10,5 +10,7 @@ namespace sistema_consultorio.br.com.projeto.model
     {
         public int cro { get; set; }
         public string uf_cro { get; set; }
+        public string senha { get; set; }
+        public string nivel_acesso { get; set; }
     }
 }
