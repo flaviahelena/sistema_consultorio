@@ -8,24 +8,26 @@ using System.Threading.Tasks;
 
 namespace sistema_consultorio.br.com.projeto.dao
 {
-    public class FuncionarioDAO
+    
+    public class PacienteDAO
     {
         private MySqlConnection conexao;
-        public FuncionarioDAO()
+
+        public PacienteDAO()
         {
             this.conexao = new ConnectionFactory().getconnection();
         }
 
-        #region Método para cadastrar um funcionario
-        public void CadastrarFuncionario (Funcionario obj)
+        #region Método para cadastrar um paciente
+        public void CadastrarPaciente(Paciente obj)
         {
             try
             {
                 //comando SQL
-                string strCmd = @"insert into tb_funcionarios (nome,data_cadastro,data_nascimento,cpf,rg,telefone,celular
-                                  email,senha,nivel_acesso,endereco,numero,complemento,bairro,cidade,cep,estado,sexo) values
+                string strCmd = @"insert into tb_pacientes (nome,data_cadastro,data_nascimento,cpf,rg,telefone,celular
+                                  email,senha,endereco,numero,complemento,bairro,cidade,cep,estado,sexo,nome_pai,nome_mae) values
                                   (@nome,@data_cadastro,@data_nascimento,@cpf,@rg,@telefone,@celular
-                                  @email,@senha,@nivel_acesso,@endereco,@numero,@complemento,@bairro,@cidade,@cep,@estado,@sexo)";
+                                  @email,@senha,@endereco,@numero,@complemento,@bairro,@cidade,@cep,@estado,@sexo,@nome_pai,@nome_mae)";
 
                 MySqlCommand executacmd = new MySqlCommand(strCmd, conexao);
                 executacmd.Parameters.AddWithValue("@nome", obj.nome);
@@ -35,9 +37,7 @@ namespace sistema_consultorio.br.com.projeto.dao
                 executacmd.Parameters.AddWithValue("@rg", obj.rg);
                 executacmd.Parameters.AddWithValue("@telefone", obj.telefone);
                 executacmd.Parameters.AddWithValue("@celular", obj.celular);
-                executacmd.Parameters.AddWithValue("@email", obj.email);
                 executacmd.Parameters.AddWithValue("@senha", obj.senha);
-                executacmd.Parameters.AddWithValue("@nivel_acesso", obj.nivel_acesso);
                 executacmd.Parameters.AddWithValue("@endereco", obj.endereco);
                 executacmd.Parameters.AddWithValue("@numero", obj.numero);
                 executacmd.Parameters.AddWithValue("@complemento", obj.complemento);
@@ -46,11 +46,13 @@ namespace sistema_consultorio.br.com.projeto.dao
                 executacmd.Parameters.AddWithValue("@cep", obj.cep);
                 executacmd.Parameters.AddWithValue("@estado", obj.estado);
                 executacmd.Parameters.AddWithValue("@sexo", obj.sexo);
+                executacmd.Parameters.AddWithValue("@nome_pai", obj.nome_pai);
+                executacmd.Parameters.AddWithValue("@nome_mae", obj.nome_mae);
 
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
-                MessageBox.Show("Funcionario cadastrado com sucesso!");
+                MessageBox.Show("Paciente cadastrado com sucesso!");
 
                 conexao.Close();
             }
@@ -63,16 +65,16 @@ namespace sistema_consultorio.br.com.projeto.dao
         }
         #endregion
 
-        #region Método para alterar funcionario
-        public void AlterarFuncionario(Funcionario obj)
+        #region Método para alterar paciente
+        public void AlterarPaciente(Paciente obj)
         {
             try
             {
                 //comando SQL
-                string strCmd = @"update tb_funcionarios set nome=@nome,data_cadastro=@data_cadastro,data_nascimento=@data_nascimento,
-                                  cpf=@cpf,rg=@rg,telefone=@telefone,celular=@celular,email=@email,senha=@senha,
+                string strCmd = @"update tb_pacientes set nome=@nome,data_cadastro=@data_cadastro,data_nascimento=@data_nascimento,
+                                  cpf=@cpf,rg=@rg,telefone=@telefone,celular=@celular,email=@email,
                                   endereco=@endereco,numero=@numero,complemento=@complemento,bairro=@bairro,
-                                 cidade=@cidade,cep=@cep,estado=@estado,sexo=@sexo 
+                                 cidade=@cidade,cep=@cep,estado=@estado,sexo=@sexo,nome_mae=@nome_mae,nome_pai=@nome_pai 
                                   where id=@id";
 
                 MySqlCommand executacmd = new MySqlCommand(strCmd, conexao);
@@ -84,7 +86,6 @@ namespace sistema_consultorio.br.com.projeto.dao
                 executacmd.Parameters.AddWithValue("@rg", obj.rg);
                 executacmd.Parameters.AddWithValue("@telefone", obj.telefone);
                 executacmd.Parameters.AddWithValue("@celular", obj.celular);
-                executacmd.Parameters.AddWithValue("@senha", obj.senha);
                 executacmd.Parameters.AddWithValue("@endereco", obj.endereco);
                 executacmd.Parameters.AddWithValue("@numero", obj.numero);
                 executacmd.Parameters.AddWithValue("@complemento", obj.complemento);
@@ -93,11 +94,13 @@ namespace sistema_consultorio.br.com.projeto.dao
                 executacmd.Parameters.AddWithValue("@cep", obj.cep);
                 executacmd.Parameters.AddWithValue("@estado", obj.estado);
                 executacmd.Parameters.AddWithValue("@sexo", obj.sexo);
+                executacmd.Parameters.AddWithValue("@nome_pai", obj.nome_pai);
+                executacmd.Parameters.AddWithValue("@nome_mae", obj.nome_mae);
 
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
-                MessageBox.Show("Funcionario alterado com sucesso!");
+                MessageBox.Show("Paciente alterado com sucesso!");
 
                 conexao.Close();
             }
@@ -110,13 +113,13 @@ namespace sistema_consultorio.br.com.projeto.dao
         }
         #endregion  
 
-        #region Método para excluir funcionario
-        public void ExcluirFuncionario(Funcionario obj)
+        #region Método para excluir paciente
+        public void ExcluirPaciente(Paciente obj)
         {
             try
             {
                 //definir o cmd SQL - delete
-                string strCmd = @"delete from tb_funcionarios where id=@id";
+                string strCmd = @"delete from tb_pacientes where id=@id";
 
                 //organizar o cmd SQL
                 MySqlCommand executacmd = new MySqlCommand(strCmd, conexao);
@@ -126,15 +129,14 @@ namespace sistema_consultorio.br.com.projeto.dao
                 conexao.Open();
                 executacmd.ExecuteNonQuery();
 
-                MessageBox.Show("Funcionario excluído com sucesso!");
+                MessageBox.Show("Paciente excluído com sucesso!");
 
                 conexao.Close();
             }
             catch (Exception erro)
             {
-
                 MessageBox.Show("Ocorreu um erro: " + erro);
-                conexao.Close();    
+                conexao.Close();
             }
         }
         #endregion
