@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4+Nc2RvIkic4FOewr6BGSSnTdaLgBYEr9zyjRol72VTf4MRfID0P2eryC+aExNUsBoWtIfqhVCNersTYGAx9Dw==",
+  "dgSpecHash": "A8HyDw+KbcX90qucljZIXr9jhhnHrgDzTGyJgm/MqgDLUyuyo9SvSl+vQEhUAXtybvuiUPgr98pnUqCDwK0BxA==",
   "success": true,
   "projectFilePath": "D:\\repos\\sistema_consultorio\\sistema_consultorio.csproj",
   "expectedPackageFiles": [
@@ -8,21 +8,331 @@
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\k4os.compression.lz4.streams\\1.2.6\\k4os.compression.lz4.streams.1.2.6.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\k4os.hash.xxhash\\1.0.6\\k4os.hash.xxhash.1.0.6.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.aspnet.authorization\\1.0.0-rc1-final\\microsoft.aspnet.authorization.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.aspnet.fileproviders.abstractions\\1.0.0-rc1-final\\microsoft.aspnet.fileproviders.abstractions.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.aspnet.hosting.abstractions\\1.0.0-rc1-final\\microsoft.aspnet.hosting.abstractions.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.aspnet.http.abstractions\\1.0.0-rc1-final\\microsoft.aspnet.http.abstractions.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.aspnet.http.extensions\\1.0.0-rc1-final\\microsoft.aspnet.http.extensions.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.aspnet.http.features\\1.0.0-rc1-final\\microsoft.aspnet.http.features.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.aspnet.mvc.abstractions\\6.0.0-rc1-final\\microsoft.aspnet.mvc.abstractions.6.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.aspnet.mvc.core\\6.0.0-rc1-final\\microsoft.aspnet.mvc.core.6.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.aspnet.mvc.dataannotations\\6.0.0-rc1-final\\microsoft.aspnet.mvc.dataannotations.6.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.aspnet.routing\\1.0.0-rc1-final\\microsoft.aspnet.routing.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.configuration\\1.0.0-rc1-final\\microsoft.extensions.configuration.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\1.0.0-rc1-final\\microsoft.extensions.configuration.abstractions.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.configuration.binder\\1.0.0-rc1-final\\microsoft.extensions.configuration.binder.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\1.0.0-rc1-final\\microsoft.extensions.dependencyinjection.abstractions.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.localization\\1.0.0-rc1-final\\microsoft.extensions.localization.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\1.0.0-rc1-final\\microsoft.extensions.localization.abstractions.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\1.0.0-rc1-final\\microsoft.extensions.logging.abstractions.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.memorypool\\1.0.0-rc1-final\\microsoft.extensions.memorypool.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.optionsmodel\\1.0.0-rc1-final\\microsoft.extensions.optionsmodel.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.platformabstractions\\1.0.0-rc1-final\\microsoft.extensions.platformabstractions.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.primitives\\1.0.0-rc1-final\\microsoft.extensions.primitives.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.extensions.webencoders.core\\1.0.0-rc1-final\\microsoft.extensions.webencoders.core.1.0.0-rc1-final.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.net.http.headers\\1.0.0-rc1-final\\microsoft.net.http.headers.1.0.0-rc1-final.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\mysql.data\\8.0.31\\mysql.data.8.0.31.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.0.0-beta-23516\\system.diagnostics.diagnosticsource.4.0.0-beta-23516.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.diagnostics.tracing\\4.0.0\\system.diagnostics.tracing.4.0.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.runtime\\4.0.0\\system.runtime.4.0.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.text.encoding.codepages\\4.4.0\\system.text.encoding.codepages.4.4.0.nupkg.sha512",
-    "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.threading\\4.0.0\\system.threading.4.0.0.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\tulpep.notificationwindow\\1.1.38\\tulpep.notificationwindow.1.1.38.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.Authorization 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.Authorization",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.FileProviders.Abstractions 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.FileProviders.Abstractions",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.Hosting.Abstractions 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.Hosting.Abstractions",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.Http.Abstractions 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.Http.Abstractions",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.Http.Extensions 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.Http.Extensions",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.Http.Features 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.Http.Features",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.Mvc.Abstractions 6.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.Mvc.Abstractions",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.Mvc.Core 6.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.Mvc.Core",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.Mvc.DataAnnotations 6.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.Mvc.DataAnnotations",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.AspNet.Routing 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.AspNet.Routing",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.Configuration 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.Configuration",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.Configuration.Abstractions 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.Configuration.Abstractions",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.Configuration.Binder 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.Configuration.Binder",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.DependencyInjection.Abstractions 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.DependencyInjection.Abstractions",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.Localization 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.Localization",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.Localization.Abstractions 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.Localization.Abstractions",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.Logging.Abstractions 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.Logging.Abstractions",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.MemoryPool 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.MemoryPool",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.OptionsModel 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.OptionsModel",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.PlatformAbstractions 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.PlatformAbstractions",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.Primitives 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.Primitives",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Extensions.WebEncoders.Core 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Extensions.WebEncoders.Core",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Microsoft.Net.Http.Headers 1.0.0-rc1-final' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Microsoft.Net.Http.Headers",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'System.Diagnostics.DiagnosticSource 4.0.0-beta-23516' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "System.Diagnostics.DiagnosticSource",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'System.Diagnostics.Tracing 4.0.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "System.Diagnostics.Tracing",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'System.Runtime 4.0.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "System.Runtime",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'System.Threading 4.0.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "System.Threading",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'Tulpep.NotificationWindow 1.1.38' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "Tulpep.NotificationWindow",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }
