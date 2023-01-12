@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionario));
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -65,7 +66,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.Endereço = new System.Windows.Forms.GroupBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.btnCep = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -82,6 +84,11 @@
             this.tabFuncionarios = new System.Windows.Forms.TabControl();
             this.pageDados = new System.Windows.Forms.TabPage();
             this.pageConsulta = new System.Windows.Forms.TabPage();
+            this.tbgFuncionario = new System.Windows.Forms.DataGridView();
+            this.btnPesquisaNome = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtNomeConsulta = new System.Windows.Forms.TextBox();
+            this.ttFuncionario = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -89,6 +96,8 @@
             this.Endereço.SuspendLayout();
             this.tabFuncionarios.SuspendLayout();
             this.pageDados.SuspendLayout();
+            this.pageConsulta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbgFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExcluir
@@ -98,7 +107,9 @@
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(60, 49);
             this.btnExcluir.TabIndex = 0;
+            this.ttFuncionario.SetToolTip(this.btnExcluir, "Excluir");
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -107,6 +118,7 @@
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(60, 49);
             this.btnSalvar.TabIndex = 1;
+            this.ttFuncionario.SetToolTip(this.btnSalvar, "Salvar");
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
@@ -117,7 +129,9 @@
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(60, 49);
             this.btnPesquisar.TabIndex = 2;
+            this.ttFuncionario.SetToolTip(this.btnPesquisar, "Pesquisar");
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnInserir
             // 
@@ -126,6 +140,7 @@
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(60, 49);
             this.btnInserir.TabIndex = 3;
+            this.ttFuncionario.SetToolTip(this.btnInserir, "Novo");
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
@@ -136,7 +151,9 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(60, 49);
             this.btnEditar.TabIndex = 4;
+            this.ttFuncionario.SetToolTip(this.btnEditar, "Editar");
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnSair
             // 
@@ -145,6 +162,7 @@
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(60, 49);
             this.btnSair.TabIndex = 5;
+            this.ttFuncionario.SetToolTip(this.btnSair, "Sair");
             this.btnSair.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -340,7 +358,7 @@
             // 
             this.mskCPF.Enabled = false;
             this.mskCPF.Location = new System.Drawing.Point(33, 170);
-            this.mskCPF.Mask = "###.###.###-##";
+            this.mskCPF.Mask = "###,###,###-##";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(149, 23);
             this.mskCPF.TabIndex = 12;
@@ -444,7 +462,8 @@
             // 
             // Endereço
             // 
-            this.Endereço.Controls.Add(this.txtEstado);
+            this.Endereço.Controls.Add(this.cbEstado);
+            this.Endereço.Controls.Add(this.btnCep);
             this.Endereço.Controls.Add(this.label16);
             this.Endereço.Controls.Add(this.txtCidade);
             this.Endereço.Controls.Add(this.label15);
@@ -465,18 +484,59 @@
             this.Endereço.TabStop = false;
             this.Endereço.Text = "Endereço:";
             // 
-            // txtEstado
+            // cbEstado
             // 
-            this.txtEstado.Enabled = false;
-            this.txtEstado.Location = new System.Drawing.Point(355, 162);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(127, 23);
-            this.txtEstado.TabIndex = 24;
+            this.cbEstado.Enabled = false;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RR",
+            "RO",
+            "RJ",
+            "RN",
+            "RS",
+            "SC",
+            "SP",
+            "SE",
+            "TO",
+            ""});
+            this.cbEstado.Location = new System.Drawing.Point(393, 162);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(89, 23);
+            this.cbEstado.TabIndex = 26;
+            // 
+            // btnCep
+            // 
+            this.btnCep.BackgroundImage = global::sistema_consultorio.Properties.Resources.pesquisa;
+            this.btnCep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCep.Location = new System.Drawing.Point(143, 156);
+            this.btnCep.Name = "btnCep";
+            this.btnCep.Size = new System.Drawing.Size(33, 32);
+            this.btnCep.TabIndex = 25;
+            this.btnCep.UseVisualStyleBackColor = true;
+            this.btnCep.Click += new System.EventHandler(this.btnCep_Click);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(355, 144);
+            this.label16.Location = new System.Drawing.Point(387, 144);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(45, 15);
             this.label16.TabIndex = 23;
@@ -485,7 +545,7 @@
             // txtCidade
             // 
             this.txtCidade.Enabled = false;
-            this.txtCidade.Location = new System.Drawing.Point(158, 162);
+            this.txtCidade.Location = new System.Drawing.Point(196, 162);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(185, 23);
             this.txtCidade.TabIndex = 22;
@@ -493,7 +553,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(158, 144);
+            this.label15.Location = new System.Drawing.Point(196, 144);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(47, 15);
             this.label15.TabIndex = 21;
@@ -503,7 +563,7 @@
             // 
             this.mskCep.Enabled = false;
             this.mskCep.Location = new System.Drawing.Point(22, 162);
-            this.mskCep.Mask = "##.###-###";
+            this.mskCep.Mask = "#####-###";
             this.mskCep.Name = "mskCep";
             this.mskCep.Size = new System.Drawing.Size(115, 23);
             this.mskCep.TabIndex = 20;
@@ -611,6 +671,10 @@
             // 
             // pageConsulta
             // 
+            this.pageConsulta.Controls.Add(this.tbgFuncionario);
+            this.pageConsulta.Controls.Add(this.btnPesquisaNome);
+            this.pageConsulta.Controls.Add(this.label19);
+            this.pageConsulta.Controls.Add(this.txtNomeConsulta);
             this.pageConsulta.Location = new System.Drawing.Point(4, 24);
             this.pageConsulta.Name = "pageConsulta";
             this.pageConsulta.Padding = new System.Windows.Forms.Padding(3);
@@ -619,11 +683,51 @@
             this.pageConsulta.Text = "Consulta";
             this.pageConsulta.UseVisualStyleBackColor = true;
             // 
+            // tbgFuncionario
+            // 
+            this.tbgFuncionario.AllowUserToAddRows = false;
+            this.tbgFuncionario.AllowUserToDeleteRows = false;
+            this.tbgFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbgFuncionario.Location = new System.Drawing.Point(41, 95);
+            this.tbgFuncionario.Name = "tbgFuncionario";
+            this.tbgFuncionario.ReadOnly = true;
+            this.tbgFuncionario.RowTemplate.Height = 25;
+            this.tbgFuncionario.Size = new System.Drawing.Size(956, 390);
+            this.tbgFuncionario.TabIndex = 33;
+            this.tbgFuncionario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbgFuncionario_CellClick);
+            // 
+            // btnPesquisaNome
+            // 
+            this.btnPesquisaNome.BackgroundImage = global::sistema_consultorio.Properties.Resources.search;
+            this.btnPesquisaNome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPesquisaNome.Location = new System.Drawing.Point(404, 39);
+            this.btnPesquisaNome.Name = "btnPesquisaNome";
+            this.btnPesquisaNome.Size = new System.Drawing.Size(32, 33);
+            this.btnPesquisaNome.TabIndex = 32;
+            this.btnPesquisaNome.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(41, 27);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(43, 15);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "Nome:";
+            // 
+            // txtNomeConsulta
+            // 
+            this.txtNomeConsulta.Location = new System.Drawing.Point(41, 45);
+            this.txtNomeConsulta.Name = "txtNomeConsulta";
+            this.txtNomeConsulta.Size = new System.Drawing.Size(357, 23);
+            this.txtNomeConsulta.TabIndex = 11;
+            this.txtNomeConsulta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomeConsulta_KeyPress);
+            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1159, 626);
+            this.ClientSize = new System.Drawing.Size(1159, 637);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEditar);
@@ -650,6 +754,9 @@
             this.Endereço.PerformLayout();
             this.tabFuncionarios.ResumeLayout(false);
             this.pageDados.ResumeLayout(false);
+            this.pageConsulta.ResumeLayout(false);
+            this.pageConsulta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbgFuncionario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -692,7 +799,6 @@
         private Label label6;
         private TextBox txtEmail;
         private GroupBox Endereço;
-        private TextBox txtEstado;
         private Label label16;
         private TextBox txtCidade;
         private Label label15;
@@ -709,5 +815,12 @@
         private TabControl tabFuncionarios;
         private TabPage pageDados;
         private TabPage pageConsulta;
+        private Button btnCep;
+        private ComboBox cbEstado;
+        private DataGridView tbgFuncionario;
+        private Button btnPesquisaNome;
+        private Label label19;
+        private TextBox txtNomeConsulta;
+        private ToolTip ttFuncionario;
     }
 }

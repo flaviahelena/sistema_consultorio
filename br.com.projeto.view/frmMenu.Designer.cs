@@ -48,7 +48,7 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.txtUser = new System.Windows.Forms.ToolStripStatusLabel();
+            this.txtUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -153,7 +153,7 @@
             this.toolStripStatusLabel3,
             this.txtHora,
             this.toolStripStatusLabel5,
-            this.txtUser});
+            this.txtUsuario});
             this.statusStrip1.Location = new System.Drawing.Point(0, 555);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(963, 22);
@@ -195,11 +195,11 @@
             this.toolStripStatusLabel5.Size = new System.Drawing.Size(113, 17);
             this.toolStripStatusLabel5.Text = "Usuario conectado:";
             // 
-            // txtUser
+            // txtUsuario
             // 
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(118, 17);
-            this.txtUser.Text = "toolStripStatusLabel6";
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(118, 17);
+            this.txtUsuario.Text = "toolStripStatusLabel6";
             // 
             // timer1
             // 
@@ -248,9 +248,9 @@
         private ToolStripStatusLabel toolStripStatusLabel3;
         private ToolStripStatusLabel txtHora;
         private ToolStripStatusLabel toolStripStatusLabel5;
-        private ToolStripStatusLabel txtUser;
         private ToolStripMenuItem agendarConsultaToolStripMenuItem;
         private ToolStripMenuItem consultasAgendadasToolStripMenuItem;
         private System.Windows.Forms.Timer timer1;
+        public ToolStripStatusLabel txtUsuario;
     }
 }

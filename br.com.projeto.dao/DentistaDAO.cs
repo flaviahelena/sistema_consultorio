@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using sistema_consultorio.br.com.projeto.model;
+using sistema_consultorio.br.com.projeto.view;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -141,6 +142,67 @@ namespace sistema_consultorio.br.com.projeto.dao
             {
                 MessageBox.Show("Ocorreu um erro: " + erro);
                 conexao.Close();
+            }
+        }
+        #endregion
+
+        #region Método de efetuar login
+        public Boolean EfetuarLoginDentista(string email, string senha)
+        {
+            try
+            {
+                //comando SQL
+                string strCmd = "select * from tb_dentistas " +
+                                "where email = @email and senha = @senha";
+
+                //Organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(strCmd, conexao);
+                executacmd.Parameters.AddWithValue("email", email);
+                executacmd.Parameters.AddWithValue("senha", senha);
+
+                conexao.Open();
+                MySqlDataReader rd = executacmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    //login realizado com sucesso
+                    string nivel = rd.GetString("nivel_acesso");
+                    string nome = rd.GetString("nome");
+
+                    MessageBox.Show("Login realizado com sucesso!");
+                    frmMenu telaMenu = new frmMenu();
+
+                    telaMenu.txtUsuario.Text = nome;
+
+                    if (nivel.Equals("Administrador"))
+                    {
+                        telaMenu.Show();
+                    }
+                    else if (nivel.Equals("Vendedor"))
+                    {
+
+
+                        //telaMenu.menuProdutos.Enabled= false;
+                        telaMenu.Show();
+                    }
+
+                    conexao.Close();
+                    return true;
+                }
+                else
+                {
+                    //dados de entrada inválido
+                    MessageBox.Show("Email ou senha incorretos!");
+                    return false;
+                }
+
+
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Ocorreu um erro: " + erro);
+                return false;
             }
         }
         #endregion

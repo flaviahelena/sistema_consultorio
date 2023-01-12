@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lB4wqIFpAP2seAkb5QsQkBV5CrWRFgvSjlMTQjcea3+4qjfJYvcGP02jZPyYqeFtaN5o7y70A2WTX1XoJcpVtg==",
+  "dgSpecHash": "1ETdvdyz4XYDN7qiM/c8uXgEENcaS9ZYkC4fs5jkt2rietNYqMyqdE3yjp8hjMBXQ8TxDYs/knCWffnajFKt5g==",
   "success": true,
   "projectFilePath": "D:\\repos\\sistema_consultorio\\sistema_consultorio.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Flavia Helena\\.nuget\\packages\\fontawesome.sharp\\6.2.1\\fontawesome.sharp.6.2.1.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",
     "C:\\Users\\Flavia Helena\\.nuget\\packages\\k4os.compression.lz4.streams\\1.2.6\\k4os.compression.lz4.streams.1.2.6.nupkg.sha512",
