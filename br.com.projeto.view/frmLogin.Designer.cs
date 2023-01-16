@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbDentista = new System.Windows.Forms.RadioButton();
+            this.rbFuncionario = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.imgLogo = new System.Windows.Forms.PictureBox();
             this.btnEntrar = new System.Windows.Forms.Button();
-            this.rbFuncionario = new System.Windows.Forms.RadioButton();
-            this.rbDentista = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,28 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
+            // 
+            // rbDentista
+            // 
+            this.rbDentista.AutoSize = true;
+            this.rbDentista.Location = new System.Drawing.Point(30, 32);
+            this.rbDentista.Name = "rbDentista";
+            this.rbDentista.Size = new System.Drawing.Size(68, 19);
+            this.rbDentista.TabIndex = 5;
+            this.rbDentista.TabStop = true;
+            this.rbDentista.Text = "Dentista";
+            this.rbDentista.UseVisualStyleBackColor = true;
+            // 
+            // rbFuncionario
+            // 
+            this.rbFuncionario.AutoSize = true;
+            this.rbFuncionario.Location = new System.Drawing.Point(120, 32);
+            this.rbFuncionario.Name = "rbFuncionario";
+            this.rbFuncionario.Size = new System.Drawing.Size(88, 19);
+            this.rbFuncionario.TabIndex = 4;
+            this.rbFuncionario.TabStop = true;
+            this.rbFuncionario.Text = "Funcionário";
+            this.rbFuncionario.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -109,28 +131,6 @@
             this.btnEntrar.Text = "&Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
-            // 
-            // rbFuncionario
-            // 
-            this.rbFuncionario.AutoSize = true;
-            this.rbFuncionario.Location = new System.Drawing.Point(120, 32);
-            this.rbFuncionario.Name = "rbFuncionario";
-            this.rbFuncionario.Size = new System.Drawing.Size(88, 19);
-            this.rbFuncionario.TabIndex = 4;
-            this.rbFuncionario.TabStop = true;
-            this.rbFuncionario.Text = "Funcionário";
-            this.rbFuncionario.UseVisualStyleBackColor = true;
-            // 
-            // rbDentista
-            // 
-            this.rbDentista.AutoSize = true;
-            this.rbDentista.Location = new System.Drawing.Point(30, 32);
-            this.rbDentista.Name = "rbDentista";
-            this.rbDentista.Size = new System.Drawing.Size(68, 19);
-            this.rbDentista.TabIndex = 5;
-            this.rbDentista.TabStop = true;
-            this.rbDentista.Text = "Dentista";
-            this.rbDentista.UseVisualStyleBackColor = true;
             // 
             // frmLogin
             // 

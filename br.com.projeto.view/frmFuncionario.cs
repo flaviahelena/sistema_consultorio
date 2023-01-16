@@ -40,7 +40,7 @@ namespace sistema_consultorio.br.com.projeto.view
             obj.telefone = mskTelefone.Text;
             obj.celular = mskCelular.Text;
             obj.endereco = txtEndereco.Text;
-            obj.numero = int.Parse(txtNum.Text);
+            obj.numero = txtNum.Text;
             obj.complemento = txtComplemento.Text;
             obj.bairro = txtBairro.Text;
             obj.cidade = txtCidade.Text;
@@ -192,7 +192,7 @@ namespace sistema_consultorio.br.com.projeto.view
             obj.telefone = mskTelefone.Text;
             obj.celular = mskCelular.Text;
             obj.endereco = txtEndereco.Text;
-            obj.numero = int.Parse(txtNum.Text);
+            obj.numero = txtNum.Text;
             obj.complemento = txtComplemento.Text;
             obj.bairro = txtBairro.Text;
             obj.cidade = txtCidade.Text;
@@ -227,6 +227,18 @@ namespace sistema_consultorio.br.com.projeto.view
                 MessageBox.Show("Campos faltantes!");
             }
 
+        }
+
+        private void btnPesquisaNome_Click(object sender, EventArgs e)
+        {
+            string nome = txtNomeConsulta.Text;
+            FuncionarioDAO dao = new FuncionarioDAO();
+            tbgFuncionario.DataSource = dao.BuscarFuncionarioNome(nome);
+
+            if (tbgFuncionario.Rows.Count == 0)
+            {
+                tbgFuncionario.DataSource = dao.ListarFuncionarios();
+            }
         }
     }
 }

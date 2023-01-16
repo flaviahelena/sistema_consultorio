@@ -136,26 +136,26 @@ namespace sistema_consultorio.br.com.projeto.model
                                     if (ctr3 is TextBox)
                                     {
                                         //desbloqueia o campo de texto
-                                        (ctr3 as TextBox).Enabled = true;
+                                        (ctr3 as TextBox).Enabled = false;
                                     }
 
                                     if (ctr3 is MaskedTextBox)
                                     {
                                         //desbloqueia o campo de mascara
-                                        (ctr3 as MaskedTextBox).Enabled = true;
+                                        (ctr3 as MaskedTextBox).Enabled = false;
                                     }
 
                                     if (ctr3 is ComboBox)
                                     {
                                         //desbloqueia o campo de texto
-                                        (ctr3 as ComboBox).Enabled = true;
+                                        (ctr3 as ComboBox).Enabled = false;
                                     }
                                     if (ctr3.Name.Equals("grupoSexo"))
                                     {
                                         //desbloqueia o campo de texto
                                         foreach (Control ctr4 in ctr3.Controls)
                                         {
-                                            (ctr4 as RadioButton).Enabled = true;
+                                            (ctr4 as RadioButton).Enabled = false;
                                         }
 
                                     }

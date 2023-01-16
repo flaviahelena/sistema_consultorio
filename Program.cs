@@ -12,7 +12,7 @@ namespace sistema_consultorio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmFuncionario());
+            Application.Run(new frmMenu());
 
             //ApplicationConfiguration.Initialize();
             //Application.Run(new frmLogin());

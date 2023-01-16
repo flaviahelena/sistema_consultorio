@@ -35,7 +35,7 @@ namespace sistema_consultorio.br.com.projeto.model
         public string endereco { get; set; }
         public string complemento { get; set; }
         //[Required]
-        public int numero { get; set; }
+        public string numero { get; set; }
         //[Required]
         public string bairro { get; set; }
         //[Required]

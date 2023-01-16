@@ -705,6 +705,7 @@
             this.btnPesquisaNome.Size = new System.Drawing.Size(32, 33);
             this.btnPesquisaNome.TabIndex = 32;
             this.btnPesquisaNome.UseVisualStyleBackColor = true;
+            this.btnPesquisaNome.Click += new System.EventHandler(this.btnPesquisaNome_Click);
             // 
             // label19
             // 

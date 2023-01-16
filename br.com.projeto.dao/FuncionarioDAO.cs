@@ -215,6 +215,41 @@ namespace sistema_consultorio.br.com.projeto.dao
 
         #endregion
 
+        #region Método para buscar funcionário pelo nome
+        //Metodo para listar funcionarios
+        public DataTable BuscarFuncionarioNome(string nome)
+        {
+            try
+            {
+
+                // Criar DataTable e o cmd
+                DataTable tabelaFuncionario = new DataTable();
+                string strCmd = "select * from tb_funcionarios where nome=@nome";
+
+                //Organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(strCmd, conexao);
+                executacmd.Parameters.AddWithValue("nome", nome);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //Criar o MySqlDataApter para preecher os dados no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaFuncionario);
+
+                conexao.Close();
+                return tabelaFuncionario;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando de busca: " + erro);
+                return null;
+            }
+        }
+        #endregion
+
         #region EfetuarLogin
         public Boolean EfetuarLoginFuncionario(string email, string senha)
         {
