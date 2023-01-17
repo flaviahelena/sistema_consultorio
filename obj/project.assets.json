@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
+      "FontAwesome.Sharp/6.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/FontAwesome.Sharp.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/FontAwesome.Sharp.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
       "Google.Protobuf/3.19.4": {
         "type": "package",
         "compile": {
@@ -760,6 +772,21 @@
     }
   },
   "libraries": {
+    "FontAwesome.Sharp/6.2.1": {
+      "sha512": "eYpj85+70pOjV4cOfB/Et/Rj6m56WRlCKU2G4ivWCohb7sF7DwHz/3jy8XIWp9utgb/R2Pqm+HsaBwV33FBNbg==",
+      "type": "package",
+      "path": "fontawesome.sharp/6.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fontawesome.sharp.6.2.1.nupkg.sha512",
+        "fontawesome.sharp.nuspec",
+        "lib/net472/FontAwesome.Sharp.dll",
+        "lib/net48/FontAwesome.Sharp.dll",
+        "lib/net6.0-windows7.0/FontAwesome.Sharp.dll",
+        "lib/netcoreapp3.1/FontAwesome.Sharp.dll"
+      ]
+    },
     "Google.Protobuf/3.19.4": {
       "sha512": "fd07/ykL4O4FhqrZIELm5lmiyOHfdPg9+o+hWr6tcfRdS7tHXnImg/2wtogLzlW2eEmr0J7j6ZrZvaWOLiJbxQ==",
       "type": "package",
@@ -1945,6 +1972,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "FontAwesome.Sharp >= 6.2.1",
       "Microsoft.AspNet.Mvc.DataAnnotations >= 6.0.0-rc1-final",
       "MySql.Data >= 8.0.31",
       "System.ComponentModel.Annotations >= 5.0.0",
@@ -1996,6 +2024,10 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "FontAwesome.Sharp": {
+            "target": "Package",
+            "version": "[6.2.1, )"
+          },
           "Microsoft.AspNet.Mvc.DataAnnotations": {
             "target": "Package",
             "version": "[6.0.0-rc1-final, )"

@@ -1,7 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using sistema_consultorio.br.com.projeto.model;
+using sistema_consultorio.br.com.projeto.view;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,9 +25,9 @@ namespace sistema_consultorio.br.com.projeto.dao
             try
             {
                 //comando SQL
-                string strCmd = @"insert into tb_dentistas (nome,data_cadastro,data_nascimento,cpf,rg,telefone,celular
-                                  email,senha,nivel_acesso,endereco,numero,complemento,bairro,cidade,cep,estado,sexo,nome_pai,nome_mae) values
-                                  (@nome,@data_cadastro,@data_nascimento,@cpf,@rg,@telefone,@celular
+                string strCmd = @"insert into tb_dentistas (nome,data_cadastro,data_nascimento,cpf,rg,telefone,celular,
+                                  email,senha,nivel_acesso,endereco,numero,complemento,bairro,cidade,cep,estado,sexo,cro,uf_cro) values
+                                  (@nome,@data_cadastro,@data_nascimento,@cpf,@rg,@telefone,@celular,
                                   @email,@senha,@nivel_acesso,@endereco,@numero,@complemento,@bairro,@cidade,@cep,@estado,@sexo,@cro,@uf_cro)";
 
                 MySqlCommand executacmd = new MySqlCommand(strCmd, conexao);
@@ -66,14 +68,14 @@ namespace sistema_consultorio.br.com.projeto.dao
         }
         #endregion
 
-        #region Método para alterar paciente
+        #region Método para alterar dentista
         public void AlterarDentista(Dentista obj)
         {
             try
             {
                 //comando SQL
                 string strCmd = @"update tb_dentistas set nome=@nome,data_cadastro=@data_cadastro,data_nascimento=@data_nascimento,
-                                  cpf=@cpf,rg=@rg,telefone=@telefone,celular=@celular,email=@email,senha=@senha,nivel_acessp=@nivel_acesso,
+                                  cpf=@cpf,rg=@rg,telefone=@telefone,celular=@celular,email=@email,senha=@senha,nivel_acesso=@nivel_acesso,
                                   endereco=@endereco,numero=@numero,complemento=@complemento,bairro=@bairro,
                                  cidade=@cidade,cep=@cep,estado=@estado,sexo=@sexo,cro=@cro,uf_cro=@uf_cro 
                                   where id=@id";
@@ -141,6 +143,173 @@ namespace sistema_consultorio.br.com.projeto.dao
             {
                 MessageBox.Show("Ocorreu um erro: " + erro);
                 conexao.Close();
+            }
+        }
+        #endregion
+
+        #region Método para listar dentista pelo nome
+        //Metodo para listar clientes
+        public DataTable ListarDentistaPeloNome(string nome)
+        {
+            try
+            {
+
+                // Criar DataTable e o cmd
+                DataTable tabelaDentista = new DataTable();
+                string strCmd = "select * from tb_dentistas where nome like @nome";
+
+                //Organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(strCmd, conexao);
+                executacmd.Parameters.AddWithValue("nome", nome);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //Criar o MySqlDataApter para preecher os dados no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaDentista);
+
+                conexao.Close();
+                return tabelaDentista;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando de busca: " + erro);
+                return null;
+            }
+        }
+        #endregion
+
+        #region Método para listar funcionarios
+        //Metodo para listar clientes
+        public DataTable ListarDentistas()
+        {
+            try
+            {
+
+                // Criar DataTable e o cmd
+                DataTable tabelaDentista = new DataTable();
+                string strCmd = "select * from tb_dentistas";
+
+                //Organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(strCmd, conexao);
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //Criar o MySqlDataApter para preecher os dados no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaDentista);
+
+                conexao.Close();
+                return tabelaDentista;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando de busca: " + erro);
+                return null;
+            }
+        }
+
+
+        #endregion
+
+        #region Método para buscar dentista pelo nome
+        //Metodo para listar funcionarios
+        public DataTable BuscarDentistaNome(string nome)
+        {
+            try
+            {
+
+                // Criar DataTable e o cmd
+                DataTable tabelaDentista = new DataTable();
+                Dentista obj = new Dentista();
+                string strCmd = "select * from tb_dentistas where nome=@nome";
+
+                //Organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(strCmd, conexao);
+                executacmd.Parameters.AddWithValue("nome", nome);
+
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                //Criar o MySqlDataApter para preecher os dados no DataTable
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelaDentista);
+
+                conexao.Close();
+                return tabelaDentista;
+
+            }
+            catch (Exception erro)
+            {
+
+                MessageBox.Show("Erro ao executar o comando de busca: " + erro);
+                return null;
+            }
+        }
+        #endregion
+
+        #region Método de efetuar login
+        public Boolean EfetuarLoginDentista(string email, string senha)
+        {
+            try
+            {
+                //comando SQL
+                string strCmd = "select * from tb_dentistas " +
+                                "where email = @email and senha = @senha";
+
+                //Organizar comando e executar
+                MySqlCommand executacmd = new MySqlCommand(strCmd, conexao);
+                executacmd.Parameters.AddWithValue("email", email);
+                executacmd.Parameters.AddWithValue("senha", senha);
+
+                conexao.Open();
+                MySqlDataReader rd = executacmd.ExecuteReader();
+
+                if (rd.Read())
+                {
+                    //login realizado com sucesso
+                    string nivel = rd.GetString("nivel_acesso");
+                    string nome = rd.GetString("nome");
+
+                    MessageBox.Show("Login realizado com sucesso!");
+                    frmMenu telaMenu = new frmMenu();
+
+                    telaMenu.txtUsuario.Text = nome;
+
+                    if (nivel.Equals("Administrador"))
+                    {
+                        telaMenu.Show();
+                    }
+                    else if (nivel.Equals("Vendedor"))
+                    {
+
+
+                        //telaMenu.menuProdutos.Enabled= false;
+                        telaMenu.Show();
+                    }
+
+                    conexao.Close();
+                    return true;
+                }
+                else
+                {
+                    //dados de entrada inválido
+                    MessageBox.Show("Email ou senha incorretos!");
+                    return false;
+                }
+
+
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Ocorreu um erro: " + erro);
+                return false;
             }
         }
         #endregion

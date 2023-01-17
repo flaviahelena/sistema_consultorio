@@ -57,3 +57,4 @@ D:\repos\sistema_consultorio\obj\Debug\net6.0-windows\sistema_consultorio.br.com
 D:\repos\sistema_consultorio\obj\Debug\net6.0-windows\sistema_consultorio.br.com.projeto.view.controleBranco.resources
 D:\repos\sistema_consultorio\obj\Debug\net6.0-windows\sistema_consultorio.br.com.projeto.view.userControlDias.resources
 D:\repos\sistema_consultorio\obj\Debug\net6.0-windows\sistema_consultorio.br.com.projeto.view.frmEvento.resources
+D:\repos\sistema_consultorio\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll

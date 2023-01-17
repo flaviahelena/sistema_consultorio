@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="6.2.1" />
     <PackageReference Include="Microsoft.AspNet.Mvc.DataAnnotations" Version="6.0.0-rc1-final" />
     <PackageReference Include="MySql.Data" Version="8.0.31" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />

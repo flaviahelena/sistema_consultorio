@@ -37,7 +37,6 @@ namespace sistema_consultorio.br.com.projeto.dao
                 executacmd.Parameters.AddWithValue("@rg", obj.rg);
                 executacmd.Parameters.AddWithValue("@telefone", obj.telefone);
                 executacmd.Parameters.AddWithValue("@celular", obj.celular);
-                executacmd.Parameters.AddWithValue("@senha", obj.senha);
                 executacmd.Parameters.AddWithValue("@endereco", obj.endereco);
                 executacmd.Parameters.AddWithValue("@numero", obj.numero);
                 executacmd.Parameters.AddWithValue("@complemento", obj.complemento);
@@ -140,5 +139,7 @@ namespace sistema_consultorio.br.com.projeto.dao
             }
         }
         #endregion
+
+
     }
 }
